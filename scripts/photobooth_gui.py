@@ -19,7 +19,7 @@ from constants import *
 
 ## This is a simple GUI, so we allow the root singleton to do the legwork
 root = Tk()
-root.attributes("-fullscreen",True)
+#root.attributes("-fullscreen",True)
 
 def screenshot(*args):
     import screenshot
@@ -348,7 +348,7 @@ force_snap(countdown1=0)
 root.after(200, check_and_snap)
 if custom.SIGN_ME_IN:
     root.after(custom.oauth2_refresh_period, refresh_oauth2_credentials)
-root.wm_title("Wyolum Photobooth")
+root.wm_title("Alexandra's Luau Photobooth")
 etext.focus_set()
 # etext.bind("<Enter>", sendPic)
 on_rgb_change()
