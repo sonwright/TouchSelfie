@@ -29,7 +29,7 @@ def sendMail(recipient,subject, text, *attachmentFilePaths):
   print('Sent email to %s' % recipient)
   
   ### log email address
-  email_logger.log("", recipient)
+  email_logger.log("", recipient, attachmentFilePaths)
 
 def getAttachment(attachmentFilePath):
   contentType, encoding = mimetypes.guess_type(attachmentFilePath)
