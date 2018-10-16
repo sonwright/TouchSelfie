@@ -340,7 +340,7 @@ if not signed_in:
 
 ### take the first photo (no delay)
 can.delete("text")
-can.create_text(WIDTH/2, HEIGHT/2, text="SMILE ;-)", font=custom.CANVAS_FONT, tags="splash")
+can.create_text(WIDTH/2, HEIGHT/2, text="Tap the screen to take a photo :)", font=custom.CANVAS_FONT, tags="splash")
 can.update()
 force_snap(countdown1=0)
 
