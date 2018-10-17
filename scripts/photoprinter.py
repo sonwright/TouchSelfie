@@ -5,9 +5,9 @@ my_email_password = 'strongpassword'
 subject = 'Alexandra\'s First Luau'
 ####################################################
 
-def print_photo():
+def print_photo(file_location):
     print "print photo"
-    print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p "
+    print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + file_location
 
 
 def print_photo2():

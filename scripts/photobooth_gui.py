@@ -231,7 +231,7 @@ def force_snap(countdown1=None):
 
 def printPic(*args):
     print "Printing picture"
-
+    photoprinter.print_photo("file location")
 
 
 #if they enter an email address send photo. add error checking
