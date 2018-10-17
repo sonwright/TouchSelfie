@@ -2,7 +2,7 @@
 printer_MAC = "70:2C:1F:25:77:F3"
 my_email = 'sonwright@gmail.com' # must be gmail account. 
 my_email_password = 'strongpassword'
-subject = 'Alexandra\'s First Luau''
+subject = 'Alexandra\'s First Luau'
 ####################################################
 
 def print_photo():
