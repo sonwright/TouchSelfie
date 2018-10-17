@@ -239,11 +239,11 @@ def force_snap(countdown1=None):
 def printPic():
     global printer_MAC
     print "Printing picture"
-    print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME
-    Button_enabled = False
+    #print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME
+    #Button_enabled = False
 
-    pp = subprocess.Popen(["obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME],shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    message =  pp.communicate(input)
+   	pp = subprocess.Popen("obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME, shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    message =  pp.communicate()
 	print str(message)
     msg = "failed"
     if msg.encode('utf-8') in message[0]:
