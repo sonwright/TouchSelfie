@@ -16,7 +16,13 @@ import custom
 import Image
 import config
 from constants import *
-from photoprinter import *
+
+###############CHANGE ME###########################
+printer_MAC = "70:2C:1F:25:77:F3"
+my_email = 'sonwright@gmail.com' # must be gmail account. 
+my_email_password = 'strongpassword'
+subject = 'Alexandra\'s First Luau'
+####################################################
 
 ## This is a simple GUI, so we allow the root singleton to do the legwork
 root = Tk()
@@ -229,9 +235,11 @@ def force_snap(countdown1=None):
     check_and_snap(force=True, countdown1=countdown1)
 
 
-def printPic(*args):
+def printPic(file_location):
+    global printer_MAC
     print "Printing picture"
-    photoprinter.print_photo("file location")
+    print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + file_location
+
 
 
 #if they enter an email address send photo. add error checking
