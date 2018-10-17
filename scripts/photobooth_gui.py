@@ -240,22 +240,17 @@ def printPic():
     print "Printing picture"
     print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME
     Button_enabled = False
-    can.delete("text")
-    can.create_text(WIDTH/2, HEIGHT - STATUS_H_OFFSET, text="Printing photo.  Please wait 1-2 minutes", font=custom.CANVAS_FONT, tags="text")
-    can.update()
 
-    # pp = subprocess.Popen(["obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + customer.PROC_FILENAME],shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
-    # message =  pp.communicate(input)
-    # master.config(cursor="")
-    # top.destroy()
-    # msg = "failed"
-    # if msg.encode('utf-8') in message[0]:
-    #     tkMessageBox.showerror("Error", "Print failed. Check paper or make sure printer is on and paired and print again")
+    pp = subprocess.Popen(["obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + customer.PROC_FILENAME],shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    message =  pp.communicate(input)
+    msg = "failed"
+    if msg.encode('utf-8') in message[0]:
+        tkMessageBox.showerror("Error", "Print failed. Check paper or make sure printer is on and paired and print again")
         
-    # else:
-    #     tkMessageBox.showinfo("Printing", "Photo successfully sent. Now printing...")
+    else:
+        tkMessageBox.showinfo("Printing", "Photo successfully sent to printer.  Please wait 1-2 minutes.")
         
-    # return True
+    return True
 
 #if they enter an email address send photo. add error checking
 def sendPic(*args):
