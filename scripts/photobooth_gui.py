@@ -228,6 +228,9 @@ def force_snap(countdown1=None):
     check_and_snap(force=True, countdown1=countdown1)
 
 
+def printPic(*args):
+    print "Printing picture"
+
 
 #if they enter an email address send photo. add error checking
 def sendPic(*args):
@@ -295,6 +298,8 @@ tkkb_button = Button(frame, command=launch_tkkb, text="Launch-KB")
 # tkkb_button.pack(side=LEFT)
 send_button = Button(frame, text="SendEmail", command=sendPic, font=custom.BUTTON_FONT)
 send_button.pack(side=RIGHT)
+print_button = Button(frame, text="Print", command=printPic, font=custom.BUTTON_FONT)
+print_button.pack(side=RIGHT)
 
 if custom.TIMELAPSE > 0:
     timelapse_label = Label(frame, text=custom.TIMELAPSE)
