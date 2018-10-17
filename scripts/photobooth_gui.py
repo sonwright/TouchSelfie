@@ -244,6 +244,7 @@ def printPic():
 
     pp = subprocess.Popen(["obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME],shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     message =  pp.communicate(input)
+	print str(message)
     msg = "failed"
     if msg.encode('utf-8') in message[0]:
         tkMessageBox.showerror("Error", "Print failed. Check paper or make sure printer is on and paired and print again")
