@@ -19,18 +19,17 @@ def restore_conf():
     if not os.path.exists(conf_filename):
         conf_file = open(conf_filename, 'w')
         default_conf = '''[main]
-emailsubject = Your Postcard from the Wyolum Photobooth
-emailmsg = Here's your picture from the http://wyolum.com photobooth!
-photocaption = postcard from the xxx event
-logopng = logo.png
-
-albumid = None
+emailsubject = Your Postcard from Alexandra's First Birthday!
+emailmsg = Thanks again for joining us!  Here's your photo from Alexandra's Firsth Birthday.
+photocaption = Alexandra's First Birthday Photobooth
+logopng = alexandra_logo_001.png
+albumid = 6606554695386574753
 countdown1 = 5
 countdown2 = 3
-timelapse = 0
+timelapse = 0.0
 sign_me_in = True
 archive = True
-archive_dir = %s/Photos/
+archive_dir = /home/pi/photobooth/photos/
 oauth2_refresh_period = 1800000
 ''' % install_dir
         conf_file.write(default_conf)

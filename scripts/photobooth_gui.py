@@ -239,7 +239,7 @@ def printPic():
     global printer_MAC
     file_location = "FAKE file location"
     print "Printing picture"
-    print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + file_location
+    print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME
 
 
 #if they enter an email address send photo. add error checking
