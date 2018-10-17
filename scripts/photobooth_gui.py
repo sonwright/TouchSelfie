@@ -242,7 +242,7 @@ def printPic():
     print "command: " + "obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME
     Button_enabled = False
 
-    pp = subprocess.Popen(["obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + customer.PROC_FILENAME],shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    pp = subprocess.Popen(["obexftp --nopath --noconn --uuid none --bluetooth " +  printer_MAC +  " --channel 4 -p " + custom.PROC_FILENAME],shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     message =  pp.communicate(input)
     msg = "failed"
     if msg.encode('utf-8') in message[0]:
